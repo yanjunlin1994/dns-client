@@ -58,7 +58,7 @@ public class Client {
 			String line;
 			int requestNode;
 			Random random = new Random();
-			while ((line = bufferedReader.readLine()) != null || count < sample) {
+			while ((line = bufferedReader.readLine()) != null && count < sample) {
 				list = line.split(",");
 				if (list.length < 2 || list[1].length() == 0 || list[1].length() > DNSEntry.DNS_MAXLENGTH || list[0].length() > DNSEntry.IP_MAXLENGTH) {
 					continue;
